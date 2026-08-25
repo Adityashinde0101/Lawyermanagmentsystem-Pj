@@ -154,7 +154,7 @@ include("db_con/dbCon.php");
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<h5>All rights reserved. 2024</h5>
+					<h5>All rights reserved. 2026</h5>
 				</div>
 			</div>
 		</div>

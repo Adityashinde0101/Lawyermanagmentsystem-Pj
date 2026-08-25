@@ -420,7 +420,7 @@ d<script src="js/underscore-min.js" type="text/javascript"></script>
 
 		<!--footer-->
 		<div></div><div class="footer">
-		   <p>&copy; All rights reserved. 2024</p>
+		   <p>&copy; All rights reserved. 2026</p>
 		</div>
         <!--//footer-->
 	</div>

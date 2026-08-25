@@ -1,9 +1,9 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 05, 2024 at 10:47 AM
+-- Generation Time: Mar 05, 2026 at 10:47 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -60,10 +60,10 @@ CREATE TABLE `booking` (
 --
 
 INSERT INTO `booking` (`booking_id`, `date`, `description`, `client_id`, `lawyer_id`, `status`) VALUES
-(14, '2024-02-27', 'xdtgjhntrfgn', 'Client65dc337380f4a', 'Lawyer65dc33078b33d', 'Accepted'),
-(15, '2024-02-20', 'xdfhdxfjn', 'Client65dc3cfd32a0f', 'Lawyer65dc3cce3821a', 'Accepted'),
-(16, '2024-02-29', 'xruthudybg', 'Client65dc3cfd32a0f', 'Lawyer65e0466573d6c', 'Accepted'),
-(17, '2024-03-01', 'udgh', 'Client65dc3cfd32a0f', 'Lawyer65e17611865be', 'Accepted');
+(14, '2026-02-27', 'xdtgjhntrfgn', 'Client65dc337380f4a', 'Lawyer65dc33078b33d', 'Accepted'),
+(15, '2026-02-20', 'xdfhdxfjn', 'Client65dc3cfd32a0f', 'Lawyer65dc3cce3821a', 'Accepted'),
+(16, '2026-02-29', 'xruthudybg', 'Client65dc3cfd32a0f', 'Lawyer65e0466573d6c', 'Accepted'),
+(17, '2026-03-01', 'udgh', 'Client65dc3cfd32a0f', 'Lawyer65e17611865be', 'Accepted');
 
 -- --------------------------------------------------------
 
@@ -94,8 +94,8 @@ CREATE TABLE `cases` (
 --
 
 INSERT INTO `cases` (`case_id`, `case_name`, `case_number`, `alternate_number`, `case_type`, `case_subtype`, `case_number_filing`, `description`, `registration_number`, `crn_number`, `filling_date`, `first_hearing_date`, `created_at`, `updated_at`, `lawyer_id`) VALUES
-(8, 'fwfav ', '1', '1252', 'criminal', 'subtype1', '671', 'sertjhmnfg', '65468', '365249', '2024-01-31', '2024-01-29', '2024-02-26 06:50:23', '2024-02-26 06:50:23', 'Lawyer65dc33078b33d'),
-(9, 'fwfav ', '1', '1252', 'civil', 'subtype1', '671/', 'ass', '65468', '365249', '2024-02-16', '2024-02-23', '2024-02-28 03:18:17', '2024-02-28 03:18:17', 'Lawyer65dc3cce3821a');
+(8, 'fwfav ', '1', '1252', 'criminal', 'subtype1', '671', 'sertjhmnfg', '65468', '365249', '2026-01-31', '2026-01-29', '2026-02-26 06:50:23', '2026-02-26 06:50:23', 'Lawyer65dc33078b33d'),
+(9, 'fwfav ', '1', '1252', 'civil', 'subtype1', '671/', 'ass', '65468', '365249', '2026-02-16', '2026-02-23', '2026-02-28 03:18:17', '2026-02-28 03:18:17', 'Lawyer65dc3cce3821a');
 
 -- --------------------------------------------------------
 
@@ -117,9 +117,9 @@ CREATE TABLE `client` (
 --
 
 INSERT INTO `client` (`client_id`, `contact_number`, `full_address`, `city`, `zip_code`, `image`) VALUES
-('Client65dc337380f4a', '7066884294', 'At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', '424116 ', '20240226074507_po.png '),
-('Client65dc3cfd32a0f', '1234567912', 'At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', '424116 ', '20240226082549_SYME EME  2 PPT METROLOGY.pptx '),
-('Client65e0471ddf6f1', '7066884294', 'At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', '424116 ', '20240229095805_IMG_20221018_214600_733.jpg ');
+('Client65dc337380f4a', '7066884294', 'At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', '424116 ', '20260226074507_po.png '),
+('Client65dc3cfd32a0f', '1234567912', 'At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', '424116 ', '20260226082549_SYME EME  2 PPT METROLOGY.pptx '),
+('Client65e0471ddf6f1', '7066884294', 'At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', '424116 ', '20260229095805_IMG_20221018_214600_733.jpg ');
 
 -- --------------------------------------------------------
 
@@ -178,10 +178,10 @@ CREATE TABLE `invoices` (
 --
 
 INSERT INTO `invoices` (`invoiceno`, `invoicedate`, `cname`, `caddress`, `ccity`, `s1name`, `s1price`, `s2name`, `s2price`, `shipdescription`, `shipamount`, `tdescription`, `tamount`, `total`, `lawyer_id`) VALUES
-(1, '2024-02-12', 'Shubham Rahile', 'At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', 'drth', 2000.00, 'dryhrt', 20000.00, 'e56h', 2000.00, 'uyh6tgf', 220000.00, 244000.00, 'Lawyer65dc3cce3821a'),
-(2, '2024-02-27', 'Shubham Rahile', 'At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', 'drth', 2000.00, 'dryhrt', 20000.00, 'e56h', 2000.00, 'uyh6tgf', 220000.00, 244000.00, 'Lawyer65dc33078b33d'),
-(3, '2024-02-28', 'Shubham Rahile', 'At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', 'drth', 2000.00, 'dryhrt', 20000.00, 'e56h', 2000.00, 'uyh6tgf', 220000.00, 244000.00, 'Lawyer65dc3cce3821a'),
-(4, '2024-02-28', 'Aditya Shinde', 'At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', 'First Metting ', 2000.00, 'Finding Task', 20000.00, '', 2000.00, '', 220000.00, 244000.00, 'Lawyer65deb23873620');
+(1, '2026-02-12', 'Shubham Rahile', 'At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', 'drth', 2000.00, 'dryhrt', 20000.00, 'e56h', 2000.00, 'uyh6tgf', 220000.00, 244000.00, 'Lawyer65dc3cce3821a'),
+(2, '2026-02-27', 'Shubham Rahile', 'At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', 'drth', 2000.00, 'dryhrt', 20000.00, 'e56h', 2000.00, 'uyh6tgf', 220000.00, 244000.00, 'Lawyer65dc33078b33d'),
+(3, '2026-02-28', 'Shubham Rahile', 'At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', 'drth', 2000.00, 'dryhrt', 20000.00, 'e56h', 2000.00, 'uyh6tgf', 220000.00, 244000.00, 'Lawyer65dc3cce3821a'),
+(4, '2026-02-28', 'Aditya Shinde', 'At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', 'First Metting ', 2000.00, 'Finding Task', 20000.00, '', 2000.00, '', 220000.00, 244000.00, 'Lawyer65deb23873620');
 
 -- --------------------------------------------------------
 
@@ -209,16 +209,16 @@ CREATE TABLE `lawyer` (
 --
 
 INSERT INTO `lawyer` (`lawyer_id`, `contact_Number`, `university_College`, `degree`, `passing_year`, `full_address`, `city`, `zip_code`, `practise_Length`, `case_handle`, `speciality`, `image`) VALUES
-('Lawyer65dc33078b33d', '7066884294', 'K K Wagh ', 'LLB', '2017', 'At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', '424116', '1-5 years', 'Criminal matter,Civil matter,Writ Jurisdiction,', 'IT Law', '20240226074319_IMG_20221018_214600_733.jpg'),
-('Lawyer65dc3cce3821a', '1234567456', 'K K Wagh ', 'LLB', '2000', 'At Adgaon post deoli tal chalisgaon dist jalgaon, At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', '424116', '6-10 years', 'Labour Law,Property Law,Others,', 'Property Law', '20240226082502_po.png'),
-('Lawyer65deb23873620', '1234567890', 'K K Wagh Institute of law', 'LLB', '2000', 'At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', '424116', '1-5 years', 'Criminal matter,Civil matter,Writ Jurisdiction,', 'IT Law', '20240228051032_lowyer2.jpg'),
-('Lawyer65deb2d5b5edd', '1234567890', 'SNJB college of Law', 'LLM', '2010', 'chalishaon', 'Chalisgaon', '424116', '6-10 years', 'Civil matter,Company law,Commercial matter,', 'Criminal Law', '20240228051309_lowyer.jpg'),
-('Lawyer65deb323b3e10', '1234567890', 'K K Wagh Institute of law', 'LLB', '2017', 'At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', '424116', '11-15 years', 'Civil matter,Writ Jurisdiction,Contract law,Construction law,Family Law,', 'Taxation Law', '20240228051427_lowyer1.jpg'),
-('Lawyer65deb3dd98aea', '1234567890', 'SNJB college of Law', 'LLM', '2000', 'Kamatwada', 'Nashik', '422232', '11-15 years', 'Contract law,Commercial matter,Construction law,Family Law,Others,', 'Labour Law', '20240228051733_lowyer5.jpg'),
-('Lawyer65deb4282d66a', '1234567890', 'K K Wagh Institute of law', 'LLM', '2007', 'At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', '424116', 'Most Senior', 'Criminal matter,Civil matter,Writ Jurisdiction,Commercial matter,Family Law,', 'Taxation Law', '20240228051848_lowyer6.webp'),
-('Lawyer65deb47478d80', '1245678901', 'SNJB college of Law', 'LLB', '2018', 'At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', '424116', '1-5 years', 'Construction law,Information Technology,Family Law,Religious Matter,Labour Law,Property Law,', 'Family Law', '20240228052004_lowyer8.jpg'),
-('Lawyer65e0466573d6c', '7066884294', 'K K Wagh Institute of law', 'LLB', '2018', 'At Adgaon post deoli tal chalisgaon dist jalgaon, At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', '424116', '11-15 years', 'Civil matter,Writ Jurisdiction,Company law,', 'IT Law', '20240229095501_po.png'),
-('Lawyer65e17611865be', '7066884294', 'K K Wagh ', 'LLB', '2014', 'At Adgaon post deoli tal chalisgaon dist jalgaon, At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', '424116', '6-10 years', 'Civil matter,Company law,', 'IT Law', '20240301073041_IMG_20221018_214600_733.jpg');
+('Lawyer65dc33078b33d', '7066884294', 'K K Wagh ', 'LLB', '2017', 'At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', '424116', '1-5 years', 'Criminal matter,Civil matter,Writ Jurisdiction,', 'IT Law', '20260226074319_IMG_20221018_214600_733.jpg'),
+('Lawyer65dc3cce3821a', '1234567456', 'K K Wagh ', 'LLB', '2000', 'At Adgaon post deoli tal chalisgaon dist jalgaon, At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', '424116', '6-10 years', 'Labour Law,Property Law,Others,', 'Property Law', '20260226082502_po.png'),
+('Lawyer65deb23873620', '1234567890', 'K K Wagh Institute of law', 'LLB', '2000', 'At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', '424116', '1-5 years', 'Criminal matter,Civil matter,Writ Jurisdiction,', 'IT Law', '20260228051032_lowyer2.jpg'),
+('Lawyer65deb2d5b5edd', '1234567890', 'SNJB college of Law', 'LLM', '2010', 'chalishaon', 'Chalisgaon', '424116', '6-10 years', 'Civil matter,Company law,Commercial matter,', 'Criminal Law', '20260228051309_lowyer.jpg'),
+('Lawyer65deb323b3e10', '1234567890', 'K K Wagh Institute of law', 'LLB', '2017', 'At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', '424116', '11-15 years', 'Civil matter,Writ Jurisdiction,Contract law,Construction law,Family Law,', 'Taxation Law', '20260228051427_lowyer1.jpg'),
+('Lawyer65deb3dd98aea', '1234567890', 'SNJB college of Law', 'LLM', '2000', 'Kamatwada', 'Nashik', '422232', '11-15 years', 'Contract law,Commercial matter,Construction law,Family Law,Others,', 'Labour Law', '20260228051733_lowyer5.jpg'),
+('Lawyer65deb4282d66a', '1234567890', 'K K Wagh Institute of law', 'LLM', '2007', 'At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', '424116', 'Most Senior', 'Criminal matter,Civil matter,Writ Jurisdiction,Commercial matter,Family Law,', 'Taxation Law', '20260228051848_lowyer6.webp'),
+('Lawyer65deb47478d80', '1245678901', 'SNJB college of Law', 'LLB', '2018', 'At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', '424116', '1-5 years', 'Construction law,Information Technology,Family Law,Religious Matter,Labour Law,Property Law,', 'Family Law', '20260228052004_lowyer8.jpg'),
+('Lawyer65e0466573d6c', '7066884294', 'K K Wagh Institute of law', 'LLB', '2018', 'At Adgaon post deoli tal chalisgaon dist jalgaon, At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', '424116', '11-15 years', 'Civil matter,Writ Jurisdiction,Company law,', 'IT Law', '20260229095501_po.png'),
+('Lawyer65e17611865be', '7066884294', 'K K Wagh ', 'LLB', '2014', 'At Adgaon post deoli tal chalisgaon dist jalgaon, At Adgaon post deoli tal chalisgaon dist jalgaon', 'Chalisgaon', '424116', '6-10 years', 'Civil matter,Company law,', 'IT Law', '20260301073041_IMG_20221018_214600_733.jpg');
 
 -- --------------------------------------------------------
 
@@ -276,8 +276,8 @@ CREATE TABLE `task` (
 --
 
 INSERT INTO `task` (`id`, `task_subject`, `start_date`, `end_date`, `status1`, `priority`, `related`, `task_description`, `lawyer_id`) VALUES
-(7, 'murder ', '2024-02-06', '2024-03-01', 'not_starred', 'medium', 'case', 'gvyyubkjh', 'Lawyer65dc33078b33d'),
-(8, 'murder ', '2024-02-07', '2024-02-22', 'in_progress', 'medium', 'case', 'frttuyjfyh', 'Lawyer65dc3cce3821a');
+(7, 'murder ', '2026-02-06', '2026-03-01', 'not_starred', 'medium', 'case', 'gvyyubkjh', 'Lawyer65dc33078b33d'),
+(8, 'murder ', '2026-02-07', '2026-02-22', 'in_progress', 'medium', 'case', 'frttuyjfyh', 'Lawyer65dc3cce3821a');
 
 -- --------------------------------------------------------
 

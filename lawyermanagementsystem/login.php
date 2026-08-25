@@ -114,7 +114,7 @@
 			<div class="container ">
 				<div class="row">
 					<div class="col">
-						<h5>All rights reserved 2024
+						<h5>All rights reserved 2026
 							<script>document.write(new Date().getFullYear());</script>
 						</h5>
 					</div>

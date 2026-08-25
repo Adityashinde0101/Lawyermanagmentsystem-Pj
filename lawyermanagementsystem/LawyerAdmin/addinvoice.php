@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 session_start();
 ?>
 <!DOCTYPE HTML>
@@ -677,7 +677,7 @@ document.querySelectorAll('input').forEach(input => {
     </div>
     <!--footer-->
     <div class="footer">
-        <p>&copy; All rights reserved. 2024</p>
+        <p>&copy; All rights reserved. 2026</p>
     </div>
     <!--//footer-->
     </div>

@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 session_start();
 ?>
 <!DOCTYPE HTML>
@@ -424,7 +424,7 @@ d<script src="js/underscore-min.js" type="text/javascript"></script>
 			</div>
 		<!--footer-->
 		<div class="footer">
-		   <p>&copy; All rights reserved. 2024</p>
+		   <p>&copy; All rights reserved. 2026</p>
 		</div>
         <!--//footer-->
 	</div>

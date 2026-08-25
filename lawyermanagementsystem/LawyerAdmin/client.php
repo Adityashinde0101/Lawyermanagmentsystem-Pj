@@ -468,7 +468,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<!--footer-->
 		<div class="footer">
-			<p>&copy; All rights reserved. 2024</p>
+			<p>&copy; All rights reserved. 2026</p>
 		</div>
 		<!--//footer-->
 	</div>
