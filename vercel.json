@@ -1,0 +1,29 @@
+﻿{
+  "version": 2,
+  "functions": {
+    "lawyermanagementsystem/*.php": {
+      "runtime": "vercel-php@0.7.1"
+    },
+    "lawyermanagementsystem/LawyerAdmin/*.php": {
+      "runtime": "vercel-php@0.7.1"
+    }
+  },
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/lawyermanagementsystem/index.php"
+    },
+    {
+      "src": "/(.+\\.php)$",
+      "dest": "/lawyermanagementsystem/$1"
+    },
+    {
+      "src": "/(css|js|images|photos)/(.+)",
+      "dest": "/lawyermanagementsystem/$1/$2"
+    },
+    {
+      "src": "/LawyerAdmin/(.+\\.php)$",
+      "dest": "/lawyermanagementsystem/LawyerAdmin/$1"
+    }
+  ]
+}

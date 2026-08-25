@@ -1,8 +1,8 @@
-<?php
+﻿<?php
 // Include your database connection code
 session_start();
 
-$mysqli = new mysqli("localhost", "root", "", "lawyermanagement");
+$mysqli = new mysqli(getenv("DB_HOST") ?: "localhost", getenv("DB_USER") ?: "root", getenv("DB_PASS") ?: "", getenv("DB_NAME") ?: "lawyermanagement", (int)(getenv("DB_PORT") ?: 3306));
 
 // Check connection
 if ($mysqli->connect_error) {

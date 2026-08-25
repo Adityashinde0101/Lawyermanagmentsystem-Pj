@@ -1,12 +1,13 @@
-<?php
+﻿<?php
 session_start();
 // Connect to your MySQL database
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "lawyermanagement";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
+$servername = getenv("DB_HOST") ?: "localhost";
+  $username   = getenv("DB_USER") ?: "root";
+  $password   = getenv("DB_PASS") ?: "";
+  $dbname     = getenv("DB_NAME") ?: "lawyermanagement";
+  $port       = (int)(getenv("DB_PORT") ?: 3306);
+  
+  $conn = new mysqli($servername, $username, $password, $dbname, $port);
 
 // Check connection
 if ($conn->connect_error) {

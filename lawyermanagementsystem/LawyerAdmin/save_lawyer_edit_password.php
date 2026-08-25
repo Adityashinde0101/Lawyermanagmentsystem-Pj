@@ -1,19 +1,16 @@
-<?php
+﻿<?php
 // Function to establish a database connection
-function connect()
-{
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "lawyermanagement"; // Change this to the correct database name
+function connect(){
+    $servername = getenv("DB_HOST") ?: "localhost";
+    $username   = getenv("DB_USER") ?: "root";
+    $password   = getenv("DB_PASS") ?: "";
+    $dbname     = getenv("DB_NAME") ?: "lawyermanagement";
+    $port       = (int)(getenv("DB_PORT") ?: 3306);
 
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check connection
+    $conn = new mysqli($servername, $username, $password, $dbname, $port);
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-
     return $conn;
 }
 

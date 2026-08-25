@@ -1,15 +1,15 @@
-<?php
+﻿<?php
 session_start();
 // Assuming this PHP code is part of your larger PHP file or is included.
 
 // Establish a database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "lawyermanagement"; // Change this to the correct database name
+$servername = getenv("DB_HOST") ?: "localhost";
+$username = getenv("DB_USER") ?: "root";
+$password = getenv("DB_PASS") ?: "";
+$dbname = getenv("DB_NAME") ?: "lawyermanagement";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname, (int)(getenv("DB_PORT") ?: 3306));
 
 // Check connection
 if ($conn->connect_error) {

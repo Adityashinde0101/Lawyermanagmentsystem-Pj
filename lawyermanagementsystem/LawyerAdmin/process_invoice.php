@@ -1,14 +1,14 @@
-<?php
+﻿<?php
 // Define the function to fetch invoices from the database
 function fetch_invoices_from_database() {
     // Replace this with your actual database connection code
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "lawyermanagemnet"; // Replace with your actual database name
+    $servername = getenv("DB_HOST") ?: "localhost";
+    $username = getenv("DB_USER") ?: "root";
+    $password = getenv("DB_PASS") ?: "";
+    $dbname = getenv("DB_NAME") ?: "lawyermanagement";
 
     // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli($servername, $username, $password, $dbname, (int)(getenv("DB_PORT") ?: 3306));
 
     // Check connection
     if ($conn->connect_error) {
