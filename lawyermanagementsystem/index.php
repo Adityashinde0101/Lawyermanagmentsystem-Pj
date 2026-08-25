@@ -1,38 +1,28 @@
 <?php
-session_start();
-
-include("db_con/dbCon.php");
-
-?>
-<!doctype html>
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+include_once("db_con/dbCon.php");
+?><!doctype html>
 <html lang="en">
-
 <head>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<!-- Bootstrap CSS -->
-	<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/all.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/media.css">
-	<title></title>
-	<style>
-
-	</style>
+	<title>Lawyer Management System - Home</title>
 </head>
-
-<body>
-	<header class="customnav bg-info">
+<body><header class="customnav bg-info">
 		<div>
 			<div class="row">
 				<div class="col-md-12">
 					<nav class="navbar navbar-expand-lg ">
-						<img src="photos\ashok.png" class="fixed-image" width="85" height="85">
+						<img src="photos/ashok.png" class="fixed-image" width="85" height="85">
 						<div class="container">
 							<div class="collapse navbar-collapse" id="navbarSupportedContent">
 								<ul class="navbar-nav ml-auto ">

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_start();
 if ($_SESSION['login'] == TRUE and $_SESSION['status'] == 'Active') {
 
@@ -31,7 +31,7 @@ if ($_SESSION['login'] == TRUE and $_SESSION['status'] == 'Active') {
 				<div class="row">
 					<div class="col-md-12">
 						<nav class="navbar navbar-expand-lg ">
-							<img src="photos\ashok.png" width="85" height="85">
+							<img src="photos/ashok.png" width="85" height="85">
 							<div class="container">
 
 								<div class="collapse navbar-collapse" id="navbarSupportedContent">
