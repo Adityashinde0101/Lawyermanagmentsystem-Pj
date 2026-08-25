@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 session_start();
 // Assuming this PHP code is part of your larger PHP file or is included.
 

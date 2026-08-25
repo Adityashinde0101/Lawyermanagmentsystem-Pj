@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // Include your database connection code
 session_start();
 

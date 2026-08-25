@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 session_start();
 // Include your database connection code here or in a separate file
 $servername = getenv("DB_HOST") ?: "localhost";

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 session_start();
 function connect(){
     $servername = getenv("DB_HOST") ?: "localhost";

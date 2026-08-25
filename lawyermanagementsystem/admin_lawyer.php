@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	session_start();
 	if($_SESSION['login']==TRUE AND $_SESSION['status']=='Active'){
 		

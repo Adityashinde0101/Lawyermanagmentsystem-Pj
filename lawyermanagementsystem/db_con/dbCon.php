@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // Database connection using environment variables for Vercel deployment
 // For local development, you can set these in a .env file or fallback to localhost
 

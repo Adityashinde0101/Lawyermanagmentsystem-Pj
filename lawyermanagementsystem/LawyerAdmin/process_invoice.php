@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // Define the function to fetch invoices from the database
 function fetch_invoices_from_database() {
     // Replace this with your actual database connection code

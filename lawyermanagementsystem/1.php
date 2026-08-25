@@ -1,4 +1,4 @@
-﻿<?php
+<?php
     session_start();
     if ($_SESSION['login'] == TRUE AND $_SESSION['status'] == 'Active') {
         // Include necessary PHP files and perform any other required actions

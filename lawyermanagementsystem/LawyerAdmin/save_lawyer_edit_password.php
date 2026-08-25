@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // Function to establish a database connection
 function connect(){
     $servername = getenv("DB_HOST") ?: "localhost";

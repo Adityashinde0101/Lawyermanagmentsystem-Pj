@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 session_start();
 // Connect to your MySQL database
 $servername = getenv("DB_HOST") ?: "localhost";
