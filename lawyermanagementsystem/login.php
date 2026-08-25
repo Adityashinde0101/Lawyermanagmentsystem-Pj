@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 	<head>
 		<!-- Required meta tags -->
@@ -37,7 +37,7 @@
 										<a class="nav-link cus-a" href="lawyers.php">Lawyers</a><!--lawyers.html page-->
 									</li>
 									<li class="">
-										<a class="nav-link cus-a" href="#">About Us</a>
+										<a class="nav-link cus-a" href="about.php">About Us</a>
 									</li>
 									<li class="">
 										<a class="nav-link cus-a" href="login.php">Login</a>

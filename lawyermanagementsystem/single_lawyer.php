@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_start();
 include("db_con/dbCon.php");
 ?>
@@ -39,7 +39,7 @@ include("db_con/dbCon.php");
 								<a class="nav-link cus-a" href="single_lawyer.php">Lawyers</a><!--lawyers.html page-->
 							</li>
 							<li class="">
-								<a class="nav-link cus-a" href="#">About Us</a>
+								<a class="nav-link cus-a" href="about.php">About Us</a>
 							</li>
 							<?php if (isset($_SESSION['login']) && $_SESSION['login'] == TRUE) { ?>
 								<li class="">
