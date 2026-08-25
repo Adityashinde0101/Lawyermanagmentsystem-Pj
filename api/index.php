@@ -1,4 +1,5 @@
 <?php
+ob_start();
 /**
  * Single-entry PHP router for Vercel Hobby plan (12 function limit)
  * Routes all requests to the correct file in lawyermanagementsystem/
@@ -41,7 +42,6 @@ $ext = pathinfo($realTarget, PATHINFO_EXTENSION);
 
 // Serve PHP files
 if ($ext === "php") {
-    // Set working directory to the folder containing the target file
     $targetDir = dirname($realTarget);
     chdir($targetDir);
     require $realTarget;
