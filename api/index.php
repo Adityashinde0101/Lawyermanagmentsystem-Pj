@@ -36,12 +36,27 @@ if ($realTarget === false || strpos($realTarget, $realBase) !== 0) {
 }
 
 if (!file_exists($realTarget)) {
+    // Check if image filename has year mismatch between 2026 and 2024
+    if (str_contains($targetFile, "2026")) {
+        $altTarget = str_replace("2026", "2024", $targetFile);
+        if (file_exists($altTarget)) {
+            $realTarget = realpath($altTarget);
+        }
+    } elseif (str_contains($targetFile, "2024")) {
+        $altTarget = str_replace("2024", "2026", $targetFile);
+        if (file_exists($altTarget)) {
+            $realTarget = realpath($altTarget);
+        }
+    }
+}
+
+if (!$realTarget || !file_exists($realTarget)) {
     http_response_code(404);
     echo "404 Not Found: " . htmlspecialchars($requestPath);
     exit;
 }
 
-$ext = pathinfo($realTarget, PATHINFO_EXTENSION);
+$ext = strtolower(pathinfo($realTarget, PATHINFO_EXTENSION));
 
 // Serve PHP files
 if ($ext === "php") {
@@ -61,6 +76,7 @@ $mimeTypes = [
     "gif"  => "image/gif",
     "svg"  => "image/svg+xml",
     "ico"  => "image/x-icon",
+    "webp" => "image/webp",
     "woff" => "font/woff",
     "woff2"=> "font/woff2",
     "ttf"  => "font/ttf",
@@ -68,6 +84,11 @@ $mimeTypes = [
 ];
 
 $mime = $mimeTypes[$ext] ?? "application/octet-stream";
+if (ob_get_level()) {
+    ob_end_clean();
+}
 header("Content-Type: $mime");
 header("Cache-Control: public, max-age=31536000");
+header("Content-Length: " . filesize($realTarget));
 readfile($realTarget);
+exit;
