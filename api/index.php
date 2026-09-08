@@ -14,12 +14,15 @@ if ($requestPath === "" || $requestPath === "/") {
     $requestPath = "index.php";
 }
 
-// Ensure .php extension for extensionless routes
-if (!str_contains($requestPath, ".")) {
+$baseDir     = dirname(__DIR__) . "/lawyermanagementsystem/";
+
+// If path is a directory (or ends with slash), append index.php
+if (is_dir($baseDir . $requestPath)) {
+    $requestPath = rtrim($requestPath, "/") . "/index.php";
+} elseif (!str_contains($requestPath, ".") && file_exists($baseDir . $requestPath . ".php")) {
     $requestPath .= ".php";
 }
 
-$baseDir     = dirname(__DIR__) . "/lawyermanagementsystem/";
 $targetFile  = $baseDir . $requestPath;
 
 // Security: prevent directory traversal
