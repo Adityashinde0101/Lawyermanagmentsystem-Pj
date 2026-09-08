@@ -96,29 +96,48 @@ include_once("db_con/dbCon.php");
 				include_once 'db_con/dbCon.php';
 				$conn = connect();
 
-				$result = mysqli_query($conn, "SELECT * FROM user,lawyer WHERE user.u_id=lawyer.lawyer_id AND user.status='Active'");
+				if ($conn) {
+					$result = mysqli_query($conn, "SELECT * FROM user,lawyer WHERE user.u_id=lawyer.lawyer_id AND user.status='Active'");
 
-				while ($row = mysqli_fetch_array($result)) {
-					?>
-					<div class="col-md-4">
-						<div class="card" style="width: 18rem;">
-							<img src="images/upload/<?php echo $row["image"]; ?>" class="card-img-top cusimg img-fluid"
-								alt="img">
-							<div class="card-body">
-								<h5 class="card-title">
-									<?php echo $row["first_Name"]; ?>
-									<?php echo $row["last_Name"]; ?>
-								</h5> <!--lawyers name dynamic-->
-								<h6 class="card-title">
-									<?php echo $row["speciality"]; ?>
-								</h6> <!--lawyers practice speciality dynamic-->
-								<h6 class="card-title"><span>
-										<?php echo $row["practise_Length"]; ?>
-									</span></h6> <!--lawyers practice time dynamic-->
+					if ($result && mysqli_num_rows($result) > 0) {
+						while ($row = mysqli_fetch_array($result)) {
+							?>
+							<div class="col-md-4">
+								<div class="card" style="width: 18rem;">
+									<img src="images/upload/<?php echo $row["image"]; ?>" class="card-img-top cusimg img-fluid"
+										alt="img">
+									<div class="card-body">
+										<h5 class="card-title">
+											<?php echo $row["first_Name"]; ?>
+											<?php echo $row["last_Name"]; ?>
+										</h5> <!--lawyers name dynamic-->
+										<h6 class="card-title">
+											<?php echo $row["speciality"]; ?>
+										</h6> <!--lawyers practice speciality dynamic-->
+										<h6 class="card-title"><span>
+												<?php echo $row["practise_Length"]; ?>
+											</span></h6> <!--lawyers practice time dynamic-->
 
-								<a class="btn btn-sm btn-info" href="single_lawyer.php?u_id=<?php echo $row["u_id"]; ?>"><i
-										class="fa fa-street-view"></i>&nbsp; View Full Profile</a>
+										<a class="btn btn-sm btn-info" href="single_lawyer.php?u_id=<?php echo $row["u_id"]; ?>"><i
+												class="fa fa-street-view"></i>&nbsp; View Full Profile</a>
+									</div>
+								</div>
 							</div>
+							<?php
+						}
+					} else {
+						?>
+						<div class="col-12 text-center py-4">
+							<p class="text-muted">No lawyers found at this time.</p>
+						</div>
+						<?php
+					}
+				} else {
+					?>
+					<div class="col-12 text-center py-4">
+						<div class="alert alert-warning d-inline-block text-left" role="alert">
+							<strong><i class="fa fa-exclamation-triangle"></i> Database Not Connected:</strong>
+							<p class="mb-0 mt-1 small">Could not establish a connection to the database server. Please check your cloud database host and credentials.</p>
 						</div>
 					</div>
 					<?php

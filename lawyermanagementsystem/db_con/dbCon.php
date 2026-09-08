@@ -20,6 +20,7 @@ if (file_exists($envFile)) {
 }
 
 function connect($setup = FALSE){
+    mysqli_report(MYSQLI_REPORT_OFF);
     $servername = getenv("DB_HOST")   ?: "localhost";
     $username   = getenv("DB_USER")   ?: "root";
     $password   = getenv("DB_PASS")   ?: "";
@@ -27,29 +28,35 @@ function connect($setup = FALSE){
     $port       = (int)(getenv("DB_PORT") ?: 3306);
     $ssl        = getenv("DB_SSL") ? filter_var(getenv("DB_SSL"), FILTER_VALIDATE_BOOLEAN) : ($servername !== "localhost" && $servername !== "127.0.0.1");
 
-    $con = mysqli_init();
-    if (!$con) {
-        die("mysqli_init failed");
-    }
-
-    if ($ssl) {
-        $con->ssl_set(NULL, NULL, NULL, NULL, NULL);
-    }
-
-    $dbName = $setup ? "" : $database;
-    $flags = $ssl ? MYSQLI_CLIENT_SSL : 0;
-
-    if (!@$con->real_connect($servername, $username, $password, $dbName, $port, NULL, $flags)) {
-        // Fallback without SSL if connection fails and DB_SSL is not explicitly forced
-        if ($ssl && getenv("DB_SSL") === false) {
-            $con = new mysqli($servername, $username, $password, $dbName, $port);
-            if ($con->connect_error) {
-                die("Connection failed: " . $con->connect_error);
-            }
-            return $con;
+    try {
+        $con = mysqli_init();
+        if (!$con) {
+            return false;
         }
-        die("Connection failed: " . mysqli_connect_error());
-    }
 
-    return $con;
+        if ($ssl) {
+            $con->ssl_set(NULL, NULL, NULL, NULL, NULL);
+        }
+
+        $dbName = $setup ? "" : $database;
+        $flags = $ssl ? MYSQLI_CLIENT_SSL : 0;
+
+        $connected = @$con->real_connect($servername, $username, $password, $dbName, $port, NULL, $flags);
+        if (!$connected && $ssl && getenv("DB_SSL") === false) {
+            $con = @new mysqli($servername, $username, $password, $dbName, $port);
+            if (!$con->connect_error) {
+                return $con;
+            }
+        }
+
+        if (!$connected) {
+            error_log("Database connection failed: " . mysqli_connect_error());
+            return false;
+        }
+
+        return $con;
+    } catch (Throwable $e) {
+        error_log("Database connection error: " . $e->getMessage());
+        return false;
+    }
 }
