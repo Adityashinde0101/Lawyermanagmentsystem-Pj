@@ -6,26 +6,22 @@
 	<script>
 		function MySucessFn(){
 			swal({
-				title: "Dera User...Your Registration Sucessfully Complete! Please Check Your Email",
+				title: "Dear User...Your Registration Successfully Complete! Please Check Your Email",
 				text: "",
 				type: "success",
-				
 				showConfirmButton: true,
-			},
-			window.load = function(){
-				window.location='http://localhost/lawyermanagementsystem/user_register.php';
+			}, function() {
+				window.location='user_register.php';
 			});
 		}
 		function MyCheckFn(){
 			swal({
-				title: "Sorry User!! This Email already exists..Please Fill up the form again",
+				title: "Sorry User!! This Email already exists. Please fill up the form again.",
 				text: "",
 				type: "warning",
-				
 				showConfirmButton: true,
-			},
-			window.load = function(){
-				window.location='http://localhost/lawyermanagementsystem/user_register.php';
+			}, function() {
+				window.location='user_register.php';
 			});
 		}
 	</script>
@@ -86,8 +82,7 @@
 			}
 			//echo $newName;exit;
 			}else{
-			$newName = $_POST['image'];
-			//echo $newName;exit;
+			$newName = isset($_POST['image']) ? $_POST['image'] : '';
 		}
 		
 		$u_id = uniqid('Client');

@@ -6,14 +6,12 @@
 	<script>
 		function MySucessFn(){
 			swal({
-				title: "Dear User...Booking Details Saved Sucessfully",
+				title: "Dear User...Booking Details Saved Successfully",
 				text: "",
 				type: "success",
-				
 				showConfirmButton: true,
-			},
-			window.load = function(){
-				window.location='http://localhost/lawyermanagementsystem/index.php';
+			}, function() {
+				window.location='index.php';
 			});
 		}
 	</script>

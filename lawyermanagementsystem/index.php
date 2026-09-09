@@ -80,8 +80,7 @@ include_once("db_con/dbCon.php");
 						<div class="banner_content">
 							<h1>Find Your Suitable Lawyer Here !</h1></br>
 							<h1> </h1></br>
-							<a href="searchLawyer.php" button class="btn-lg cusbutton">Find
-								Lawyers</button></a><!--lawyers.html page-->
+							<a href="searchLawyer.php" class="btn-lg cusbutton">Find Lawyers</a><!--lawyers.html page-->
 						</div>
 
 					</div>
@@ -163,7 +162,7 @@ include_once("db_con/dbCon.php");
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<h5>All rights reserved. 2026</h5>
+					<h5>All rights reserved 2026</h5>
 				</div>
 			</div>
 		</div>

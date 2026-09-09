@@ -5,7 +5,7 @@
 		session_start();
 		
 		$email = mysqli_real_escape_string($con, $_POST['email']);
-		$password = mysqli_real_escape_string($con, $_POST['passord']);
+		$password = mysqli_real_escape_string($con, $_POST['password']);
 		
 		$result = mysqli_query($con, "SELECT * FROM user INNER JOIN lawyer on user.u_id=lawyer.lawyer_id WHERE email = '" . $email. "' and password = '" . $password. "' and role='Lawyer' and status='Active'");
 		$result2 = mysqli_query($con, "SELECT * FROM user INNER JOIN client on user.u_id=client.client_id WHERE email = '" . $email. "' and password = '" . $password. "' and role='User' and status='Active'");

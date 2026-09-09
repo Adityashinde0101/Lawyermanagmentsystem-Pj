@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<!-- Required meta tags -->
@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/media.css">
-		<title>Log In here</title>
+		<title>Lawyer Registration</title>
 <style>
   .has-error .help-block {
   color: red;
@@ -131,10 +131,10 @@
 										<option value="2017">2017</option>
 										<option value="2018">2018</option>
 										<option value="2019">2019</option>
-										<option value="2016">2020</option>
-										<option value="2017">2021</option>
-										<option value="2018">2022</option>
-										<option value="2019">2023</option>
+										<option value="2020">2020</option>
+										<option value="2021">2021</option>
+										<option value="2022">2022</option>
+										<option value="2023">2023</option>
 									</select>
 								</div>
 							</div>
@@ -190,8 +190,8 @@
 									</label>
 								</div>
 								<div class="form-check">
-									<input class="form-check-input" type="checkbox"  name="case_handle[]" value="Writ Jurisdiction" id="civil">
-									<label class="form-check-label" for="civil">
+									<input class="form-check-input" type="checkbox"  name="case_handle[]" value="Writ Jurisdiction" id="writ">
+									<label class="form-check-label" for="writ">
 										Writ Jurisdiction
 									</label>
 								</div>
@@ -317,11 +317,9 @@
 		<!-- Optional JavaScript -->
 		<!-- jQuery -->
 
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-		<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
-		<script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
 
 		<script>
 			$('#validateForm').bootstrapValidator({

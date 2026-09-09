@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<!-- Required meta tags -->
@@ -98,8 +98,8 @@
 								<input type="email" class="form-control" name="email" id="email" placeholder="Enter your Valid Email address">
 							</div>
 							<div class="form-group">
-								<label for="num">Password</label>
-								<input type="password" class="form-control" name="passord" id="passord" placeholder="Enter your  Valid Password">
+								<label for="password">Password</label>
+								<input type="password" class="form-control" name="password" id="password" placeholder="Enter your Valid Password">
 							</div>
 
 							<input name="login" type="submit" class="btn btn-block btn-success" value="Login"/>
@@ -118,11 +118,9 @@
 				</div>
 			</div>
 		</footer>
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-		<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
-		<script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
 
 		<script>
 			$('#validateForm').bootstrapValidator({
